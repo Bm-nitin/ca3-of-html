@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="tourism.css">
+    <script>
+        function showPopup(event) {
+            event.preventDefault();
+            alert("Form Submitted successfully")
+        }
+    </script>
+    <style>
+        #rh1{
+            text-align: center;
+        }
+        fieldset{
+            background-color: black;
+            
+        }
+        #optionaldata{
+            color: black;
+            font-size: 1.5rem;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        #place{
+            width: 200px;
+            height: 30px;
+        }
+        #ni{
+            width: 500px;
+            text-align: center;
+            margin-left: 32%;
+            color: red;
+            font-size: 1.5rem;
+        }
+        #submit{
+            background-color: gold;
+            border-radius: 10px;
+            width: 300px;
+            height: 50px;
+            font-size: 1.5rem;
+        }
+        #reset{
+            background-color: gold;
+            border-radius: 10px;
+            width: 250px;
+            height: 40px;
+            font-size: 1.5rem;
+        }
+        body{
+            background-image: url(utar.jpg);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Explore <span>Andhra Pradesh</span></h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="attractions.html" target="_blank">Attractions</a></li>
+                <li><a href="culture.html">Culture</a></li>
+                <li><a href="food.html">Food</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="register.html" target="_blank">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <form onsubmit="showPopup(event)">
+        <h1 id="rh1">Sign Up </h1>
+        <fieldset id="ni">
+            <label for="name">Name:</label>
+            <input type="text" placeholder="Name" id="name" name="myname"><br><br>
+            Email:<input type="email" name="myemail" placeholder="Email" ><br><br>
+            Password:<input type="password" name="mypassword" placeholder="Enter your password"><br><br>
+            How many member: &nbsp;<input type="number" placeholder="Enter your number" name="mynumber"><br><br>
+            
+            <label for="place">Place you want to visit: </label>
+            <select id="place">
+                <option>select</option>
+                <option>Agra</option>
+                <option>Mathura</option>
+                <option>Varnasi</option>
+                <option>Kanpur</option>
+                <option>Lucknow</option>
+                <option>Noida</option>
+                <option>Patna</option>
+                <option>Allahabad</option>
+                <option>Ayodhya</option>
+                <option>Vrindavan</option>
+            </select><br><br>
+            
+            Optional Facilities you want:<br>
+            <textarea rows="4" cols="15" id="optionaldata"></textarea><br><br>
+            Please Give Date of trip:<input type="date" name="mydate" required
+            ><br><br>
+            <input type="submit" value="Submit Now" id="submit"><br><br>
+            <input type="reset" value="Reset Now" id="reset">
+        </fieldset>
+    </form>
+</body>
+</html>
